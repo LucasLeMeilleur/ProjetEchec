@@ -1,0 +1,14 @@
+#include "Joueur.h"
+
+
+
+
+Joueur::DonnerLeTrait(){
+	trait = true;
+}
+
+Joueur::RetirerLeTrait(){
+
+	trait = false;
+}
+

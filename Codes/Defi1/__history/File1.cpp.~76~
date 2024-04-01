@@ -1,0 +1,50 @@
+#include <iostream>
+
+
+#include <conio.h>
+#include "Echiquier.h"
+#include <Windows.h>
+
+
+int main(){
+
+
+	Echiquier monEchiquier;
+	monEchiquier.InitialiserEchiquier();
+
+	while(true){
+		std::cout << monEchiquier.VisualiserEchiquier();
+
+
+		int idep,jdep,iarr,jarr;
+
+		std::cout << "idep : ";
+		std::cin >> idep;
+		std::cout << "jdep : ";
+		std::cin >> jdep;
+		std::cout << "iarr : ";
+		std::cin >> iarr;
+		std::cout << "jarr : ";
+		std::cin >> jarr;
+
+		if (idep == -1 || jdep == -1 || iarr == -1 || jarr == -1) break;
+	    if (idep <= 8 || jdep <= 8 || iarr <= 8 || jarr <= 8) break;
+
+		monEchiquier.Deplacer(idep,jdep,iarr,jarr,' ');
+
+
+		Sleep(1000);
+        clrscr();
+	}
+
+
+
+
+
+
+
+	std::cin.get();
+	Sleep(5000);
+	return 0;
+}
+
