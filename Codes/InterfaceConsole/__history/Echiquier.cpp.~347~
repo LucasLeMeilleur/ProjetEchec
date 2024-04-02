@@ -73,31 +73,101 @@ void Echiquier::ModifierCaseEchiquier(char cPiece, int ligne, int colonne){
 bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromotion) {
 
 	bool condition = ((idep >= 0 && idep <= 7) || (jdep >= 0 && jdep <= 7) || (iarr >= 0 && iarr <= 7) || (jarr >= 0 && jarr <= 7));
-	bool White =  ( (jBlancs.Trait() == 1) && (EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0));
-	bool Black =  ( (jNoirs.Trait() == 1) && (EstUnePieceNoir(idep,jdep) == 1) && (EstUnePieceNoir(iarr,jarr) == 0));
+	bool White =  ( (jBlancs.Trait() == 1) && (EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0) );
+	bool Black =  ( (jNoirs.Trait() == 1) && (EstUnePieceNoir(idep,jdep) == 1) && (EstUnePieceNoir(iarr,jarr) == 0) );
 
 
 	if ( condition && (White || Black )){
-        char piece = LireCaseEchiquier(idep,jdep);
-		ModifierCaseEchiquier(piece,iarr,jarr);
-		ModifierCaseEchiquier(' ',idep,jdep);
-
-		if (piecePromotion != ' ') ModifierCaseEchiquier(piecePromotion,iarr,jarr);
 
 
-		std::cout << "Deplacement reussi " << std::endl;
-		return 1;
-	}
+		if (((LireCaseEchiquier(idep,jdep) == 'p') && ( iarr == 7 ))     // PROMOTIONS
+							||
+		((LireCaseEchiquier(idep,jdep) == 'P') && ( iarr == 0 )))
 
-  //	else {return 0;std::cout << "Sortie 0 : "<< std::endl;}
+		{
 
-  	std::cout << "valeur iarr et jarr : " << iarr << jarr;
-	std::cout <<  "Est une piece blanche : " << EstUnePieceBlanche(iarr,jarr) << std::endl;
-	std::cout << "W B c : ";
-	std::cout << White << Black << condition << std::endl;
 
-	std::cout << "ceci est un test de passage" << std::endl;
-	return 0;
+			if (Trait() == "noirs") {
+				ModifierCaseEchiquier(std::towupper(piecePromotion),iarr,jarr);
+				ModifierCaseEchiquier(' ',idep,jdep);
+				return 1;
+				std::cout << "Promotion";
+
+
+			}
+			else if (Trait() == "blancs") {
+
+
+				ModifierCaseEchiquier(std::towlower(piecePromotion),iarr,jarr);
+				ModifierCaseEchiquier(' ',idep,jdep);
+				return 1;
+				std::cout << "Promotion";
+			}
+			else {
+				std::cout << "erreur";
+				return 0;
+			}
+			//fin condition promotions
+
+		}
+
+
+			// EN PASSANT NOIR
+		else if	((idep == 3 && (LireCaseEchiquier(idep,jdep) == 'P'))
+								&&
+				(((LireCaseEchiquier(3,jdep-1) == 'p') && (jarr == jdep-1))
+								||
+				((LireCaseEchiquier(3,jdep+1) == 'p')  && (jarr == jdep+1))))
+		{
+
+			   ModifierCaseEchiquier(' ',3,jarr);
+               ModifierCaseEchiquier(' ', idep, jdep);
+			   ModifierCaseEchiquier('P', iarr, jarr);
+
+			   std::cout << "En passant noir";
+			   return 1;
+		}
+
+
+
+			// EN PASSANT BLANC
+		else if	((idep == 4 && (LireCaseEchiquier(idep,jdep) == 'p'))
+								&&
+				( (( LireCaseEchiquier(4,jdep-1) == 'P') && (jarr == jdep-1))
+								||
+				((LireCaseEchiquier(4,jdep+1) == 'P')  && (jarr == jdep+1))) )
+		{
+
+
+
+
+			   std::cout << "En passant noir";
+				ModifierCaseEchiquier(' ',4,jarr);
+				ModifierCaseEchiquier(' ', idep, jdep);
+				ModifierCaseEchiquier('p', iarr, jarr);
+
+				return 1;
+		}
+
+		// LES ROCKS
+
+		
+		else{
+
+			char piece = LireCaseEchiquier(idep,jdep);
+			ModifierCaseEchiquier(piece,iarr,jarr);
+			ModifierCaseEchiquier(' ',idep,jdep);
+			if (piecePromotion != ' ') ModifierCaseEchiquier(piecePromotion,iarr,jarr);
+			std::cout << "Deplacement basique reussi " << std::endl;
+
+			return 1;
+
+		}
+
+    }
+ 	else {return 0; std::cout << "Deplacement impossible "<< std::endl;}
+
+    return 0;
 }
 
 

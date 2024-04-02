@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/03/30 21:26:45.000.695,=D:\palad\Documents\Embarcadero\Studio\Projets\Project2PCH1.h</Transaction>
+    <Transaction>2024/03/30 21:26:45.000.699,=D:\palad\Documents\Embarcadero\Studio\Projets\File1.cpp</Transaction>
+    <Transaction>2024/03/30 21:27:45.000.690,=D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.cpp</Transaction>
+    <Transaction>2024/03/30 21:28:24.000.518,D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h</Transaction>
+    <Transaction>2024/03/30 21:28:24.000.518,D:\palad\Documents\Embarcadero\Studio\Projets\Unit1.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp</Transaction>
+    <Transaction>2024/03/30 21:28:28.000.065,D:\palad\Documents\Embarcadero\Studio\Projets\File1.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\File1.cpp</Transaction>
+    <Transaction>2024/03/30 21:28:29.000.271,D:\palad\Documents\Embarcadero\Studio\Projets\Project2PCH1.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Project2PCH1.h</Transaction>
+    <Transaction>2024/03/30 21:28:29.000.917,D:\palad\Documents\Embarcadero\Studio\Projets\Project2.cbproj=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Project2.cbproj</Transaction>
+    <Transaction>2024/03/30 21:29:11.000.763,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Echiquier.cpp</Transaction>
+    <Transaction>2024/03/30 21:29:11.000.763,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Echiquier.h</Transaction>
+    <Transaction>2024/03/30 23:14:37.000.498,=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp</Transaction>
+    <Transaction>2024/03/30 23:15:02.000.541,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Joueur.h</Transaction>
+    <Transaction>2024/03/30 23:15:02.000.541,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Joueur.cpp</Transaction>
+    <Transaction>2024/03/30 23:15:12.000.758,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\File1.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\main.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
