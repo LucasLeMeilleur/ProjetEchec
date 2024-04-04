@@ -44,17 +44,18 @@ int main(){
 	else if (mode == 3) {
 
 		std::string IPServeur;
-        std::string message = "";
+        std::string message;
 
 
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
 		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
-		modeClient.Recevoir(const_cast<char*>(message.data()), 150);
+		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
-		modeClient.Envoyer(message.c_str(), message.length()-1);
+		modeClient.Envoyer(message, strlen(message)-1);
+
 	}
 
 

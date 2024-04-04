@@ -54,7 +54,8 @@ int main(){
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
-		modeClient.Envoyer(message.c_str(), message.length()-1);
+		modeClient.Envoyer(const_cast<char*>(message.data()),std::strlen(message)-1);
+
 	}
 
 

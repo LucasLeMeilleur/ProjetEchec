@@ -1,5 +1,6 @@
-.\Win64\Debug\main.o: main.cpp \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\iostream \
+.\Win64\Debug\SNClientTCP.o: SNClientTCP.cpp \
+  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/SNClientTCP.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\string \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\istream \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\ostream \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\ios \
@@ -66,9 +67,8 @@
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\xdebug \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\system_error \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\cerrno \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\string \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\crtl\conio.h \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\Windows.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\winsock2.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\windows.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\sdkddkver.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\excpt.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\windef.h \
@@ -117,10 +117,6 @@
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\rpcasync.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\shellapi.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\winperf.h \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\winsock2.h \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\ws2def.h \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\inaddr.h \
-  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\qos.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\wincrypt.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\bcrypt.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\ncrypt.h \
@@ -152,7 +148,10 @@
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\mcx.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\imm.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\ime_cmodes.h \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/SNClientTCP.h \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/SNServeurTcpMonoClient.h
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\ws2def.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\inaddr.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\sdk\qos.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\windows\crtl\sys/types.h \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\fstream \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\iostream \
+  d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\sstream

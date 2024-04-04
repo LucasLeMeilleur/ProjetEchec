@@ -1,11 +1,100 @@
 #include <iostream>
-
+#include <string>
+#include <string.h>
 #include <conio.h>
-#include "Echiquier.h"
 #include <Windows.h>
 
 
+#include "Echiquier.h"
+#include "SNClientTCP.h"
+#include "SNServeurTcpMonoClient.h"
+
+
 int main(){
+
+
+	int mode;
+	SNClientTCP modeClient;
+	SNServeurTcpMonoClient modeServeur;
+	std::cin >> mode;
+
+	if (mode == 2) {
+		modeServeur.Initialisation();
+		modeServeur.MettreEnEcouteSurLePort(1066);
+		std::cout << "En écoute";
+		bool clienConnect = modeServeur.AttendreUnNouveauClient();
+		std::cout << "Quel est votre couleur ?" << std::endl;
+		std::string message = "Quel est votre couleur ?";
+		modeServeur.EnvoyerUnMessage(const_cast<char*>(message.data()), message.length()-1);
+
+		modeServeur.RecevoirUnMessage(const_cast<char*>(message.data()),150);
+
+		if( message[0] == 'N') {
+			std::cout << "Vous avez les blancs" << std::endl;
+			bool jaiLesBlancs = true;
+		}
+		else{
+			std::cout << "Vous avez les noirs" << std::endl;
+			bool jaiLesBlancs = false;
+		}
+
+
+
+	}
+	else if (mode == 3) {
+
+		std::string IPServeur;
+        std::string message = "";
+
+
+		std::cout << "Veuillez saisir l'ip du serveur : ";
+		std::cin >> IPServeur;
+		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
+		modeClient.Recevoir(const_cast<char*>(message.data()), 150);
+		std::cout << message << std::endl;
+		std::cout << "Saisir la réponse : ";
+		std::cin >> message;
+		modeClient.Envoyer( ,std::strlen(message)-1);
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 	Echiquier monEchiquier;
@@ -81,11 +170,28 @@ int main(){
 
 		}
 		else std::cout << "Coup illegal" << std::endl;
-		Sleep(5000);
+		Sleep(2500);
 		clrscr();
 	}
 	std::cin.get();
 	Sleep(2500);
+
+
+	if(mode == 2){
+
+		modeServeur.FermerLaCommunicationAvecLeClient();
+        modeServeur.ArreterLeServeur();
+	}
+
+
+
+
 	return 0;
+
+
+
+
+
+
 }
 
