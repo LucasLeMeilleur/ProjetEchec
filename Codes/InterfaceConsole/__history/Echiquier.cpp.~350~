@@ -149,7 +149,7 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 				return 1;
 		}
 
-		// LES ROCKS
+
 
 		
 		else{
@@ -165,6 +165,9 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 		}
 
 	}
+
+
+	// LES ROCKS
 	else if ( (((LireCaseEchiquier(idep,jdep) == 'R') && (LireCaseEchiquier(iarr,jarr) == 'T')) ||     //Rocks Noirs
 			((LireCaseEchiquier(iarr,jarr) == 'R') && (LireCaseEchiquier(idep,jdep) == 'T')))
 							||
@@ -242,7 +245,12 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 					}
 		}
- 	else {return 0; std::cout << "Deplacement impossible "<< std::endl;}
+	else
+	{
+
+	std::cout << "Deplacement impossible "<< std::endl;
+	return 0;
+	}
 
     return 0;
 }

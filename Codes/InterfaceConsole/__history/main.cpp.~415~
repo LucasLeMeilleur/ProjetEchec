@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <string.h>
 #include <conio.h>
@@ -16,6 +16,7 @@ int main(){
 	int mode;
 	SNClientTCP modeClient;
 	SNServeurTcpMonoClient modeServeur;
+	std::cout << "Saisir Le mode :" << '\n' << "1. Local   2. Serveur   3. Client";
 	std::cin >> mode;
 
 	if (mode == 2) {
@@ -44,18 +45,17 @@ int main(){
 	else if (mode == 3) {
 
 		std::string IPServeur;
-        std::string message;
+        char message[150];
 
 
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
+		modeClient.SeConnecterAUnServeur("192.168.1.108", 1066);
 		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
 		modeClient.Envoyer(message, strlen(message)-1);
-
 	}
 
 

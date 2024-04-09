@@ -149,7 +149,7 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 				return 1;
 		}
 
-		// LES ROCKS
+
 
 		
 		else{
@@ -164,8 +164,93 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 		}
 
-    }
- 	else {return 0; std::cout << "Deplacement impossible "<< std::endl;}
+	}
+
+
+	// LES ROCKS
+	else if ( (((LireCaseEchiquier(idep,jdep) == 'R') && (LireCaseEchiquier(iarr,jarr) == 'T')) ||     //Rocks Noirs
+			((LireCaseEchiquier(iarr,jarr) == 'R') && (LireCaseEchiquier(idep,jdep) == 'T')))
+							||
+
+			(((LireCaseEchiquier(idep,jdep) == 'r') && (LireCaseEchiquier(iarr,jarr) == 't')) ||     //Rocks Blancs
+			((LireCaseEchiquier(iarr,jarr) == 'r') && (LireCaseEchiquier(idep,jdep) == 't'))))
+
+		{
+
+					   //Grand Rock noir
+					if((((idep == 7 && jdep == 0) && (iarr == 7 && jarr == 4))     ||  ((idep ==7 && jdep == 4) && (iarr == 7 && jarr == 0)))   //Verification des emplacements des pieces
+															&&
+					( ((LireCaseEchiquier(7,1) == ' ') && (LireCaseEchiquier(7,2) == ' ') && (LireCaseEchiquier(7,3) == ' ')))) //Verification des case libres
+					{
+
+					std::cout << "grand rock noir";
+
+
+					ModifierCaseEchiquier(' ',7,4);
+					ModifierCaseEchiquier('R',7,2);
+					ModifierCaseEchiquier(' ',7,0);
+					ModifierCaseEchiquier('T',7,3);
+					 return 1;
+					}
+
+
+					// Petit Rock noir
+					else if((((idep == 7 && jdep == 7) && (iarr == 7 && jarr == 4)) ||  ((idep ==7 && jdep == 4) && (iarr == 7 && jarr == 7)))   //Verification des emplacements des pieces
+															&&
+					( ((LireCaseEchiquier(7,5) == ' ') && (LireCaseEchiquier(7,6) == ' ')))) //Verification des case libres
+					{
+
+					std::cout << "petit rock noir";
+
+					ModifierCaseEchiquier(' ',7,4);
+					ModifierCaseEchiquier('R',7,6);
+					ModifierCaseEchiquier(' ',7,7);
+					ModifierCaseEchiquier('T',7,5);
+					 return 1;
+					}
+
+
+
+					 //Grand Rock blanc
+					else if((((idep == 0 && jdep == 0) && (iarr == 0 && jarr == 4))     ||  ((idep ==0 && jdep == 4) && (iarr == 0 && jarr == 0)))   //Verification des emplacements des pieces
+															&&
+					( ((LireCaseEchiquier(0,1) == ' ') && (LireCaseEchiquier(0,2) == ' ') && (LireCaseEchiquier(0,3) == ' ')))) //Verification des case libres
+					{
+
+					std::cout << "petit rock blanc";
+
+
+					ModifierCaseEchiquier(' ',0,4);
+					ModifierCaseEchiquier('r',0,2);
+					ModifierCaseEchiquier(' ',0,0);
+					ModifierCaseEchiquier('t',0,3);
+
+					return 1;
+
+					// Petit Rock blanc
+					}
+
+					else if((((idep == 0 && jdep == 7) && (iarr == 0 && jarr == 4)) ||  ((idep ==0 && jdep == 4) && (iarr == 0 && jarr == 7)))   //Verification des emplacements des pieces
+															&&
+					( ((LireCaseEchiquier(0,5) == ' ') && (LireCaseEchiquier(0,6) == ' ')))) //Verification des case libres
+					{
+
+					std::cout << "petit rock blanc" << std::endl;
+					ModifierCaseEchiquier(' ',0,4);
+					ModifierCaseEchiquier('r',0,6);
+					ModifierCaseEchiquier(' ',0,7);
+					ModifierCaseEchiquier('t',0,5);
+
+					return 1;
+
+					}
+		}
+	else
+	{
+
+	std::cout << "Deplacement impossible "<< std::endl;
+	return 0;
+	}
 
     return 0;
 }
@@ -223,4 +308,20 @@ bool Echiquier::EstUnePieceNoir(int ligne, int colonne){
 
 	if (std::isupper(tabEchiquier[ligne][colonne])) return 1;
 	else return 0;
+}
+
+
+
+std::string Echiquier::Les64Caracteres(){
+
+	std::string TableStr;
+
+	for (i = 0; i < 8; i++) {
+		for (j = 0; j < 8; j++) {
+         	Table += tabEchiquier[i][j];
+		}
+	}
+
+	return TableStr;
+
 }

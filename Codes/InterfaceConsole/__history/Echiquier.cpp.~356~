@@ -73,8 +73,8 @@ void Echiquier::ModifierCaseEchiquier(char cPiece, int ligne, int colonne){
 bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromotion) {
 
 	bool condition = ((idep >= 0 && idep <= 7) || (jdep >= 0 && jdep <= 7) || (iarr >= 0 && iarr <= 7) || (jarr >= 0 && jarr <= 7));
-	bool White =  ( (jBlancs.Trait() == 1) && (EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0));
-	bool Black =  ( (jNoirs.Trait() == 1) && (EstUnePieceNoir(idep,jdep) == 1) && (EstUnePieceNoir(iarr,jarr) == 0));
+	bool White =  ( (jBlancs.Trait() == 1) && (EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0) );
+	bool Black =  ( (jNoirs.Trait() == 1) && (EstUnePieceNoir(idep,jdep) == 1) && (EstUnePieceNoir(iarr,jarr) == 0) );
 
 
 	if ( condition && (White || Black )){
@@ -149,9 +149,26 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 				return 1;
 		}
 
-		// LES ROCKS
 
-		else if ( (((LireCaseEchiquier(idep,jdep) == 'R') && (LireCaseEchiquier(iarr,jarr) == 'T')) ||     //Rocks Noirs
+
+		
+		else{
+
+			char piece = LireCaseEchiquier(idep,jdep);
+			ModifierCaseEchiquier(piece,iarr,jarr);
+			ModifierCaseEchiquier(' ',idep,jdep);
+			if (piecePromotion != ' ') ModifierCaseEchiquier(piecePromotion,iarr,jarr);
+			std::cout << "Deplacement basique reussi " << std::endl;
+
+			return 1;
+
+		}
+
+	}
+
+
+	// LES ROCKS
+	else if ( (((LireCaseEchiquier(idep,jdep) == 'R') && (LireCaseEchiquier(iarr,jarr) == 'T')) ||     //Rocks Noirs
 			((LireCaseEchiquier(iarr,jarr) == 'R') && (LireCaseEchiquier(idep,jdep) == 'T')))
 							||
 
@@ -167,7 +184,7 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 					{
 
 					std::cout << "grand rock noir";
-			
+
 
 					ModifierCaseEchiquier(' ',7,4);
 					ModifierCaseEchiquier('R',7,2);
@@ -201,7 +218,7 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 					{
 
 					std::cout << "petit rock blanc";
-			
+
 
 					ModifierCaseEchiquier(' ',0,4);
 					ModifierCaseEchiquier('r',0,2);
@@ -228,20 +245,12 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 					}
 		}
-		else{
+	else
+	{
 
-			char piece = LireCaseEchiquier(idep,jdep);
-			ModifierCaseEchiquier(piece,iarr,jarr);
-			ModifierCaseEchiquier(' ',idep,jdep);
-			if (piecePromotion != ' ') ModifierCaseEchiquier(piecePromotion,iarr,jarr);
-			std::cout << "Deplacement basique reussi " << std::endl;
-
-			return 1;
-
-		}
-
-    }
- 	else {return 0; std::cout << "Deplacement impossible "<< std::endl;}
+	std::cout << "Deplacement impossible "<< std::endl;
+	return 0;
+	}
 
     return 0;
 }
@@ -299,4 +308,20 @@ bool Echiquier::EstUnePieceNoir(int ligne, int colonne){
 
 	if (std::isupper(tabEchiquier[ligne][colonne])) return 1;
 	else return 0;
+}
+
+
+
+std::string Echiquier::Les64Caracteres(){
+
+	std::string TableStr;
+
+	for (i = 0; i < 8; i++) {
+		for (j = 0; j < 8; j++) {
+         	Table += tabEchiquier[i][j];
+		}
+	}
+
+	return
+
 }

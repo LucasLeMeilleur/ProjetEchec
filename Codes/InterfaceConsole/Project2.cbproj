@@ -140,6 +140,18 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="SNClientTCP.cpp">
+            <BuildOrder>7</BuildOrder>
+        </CppCompile>
+        <None Include="SNClientTCP.h">
+            <BuildOrder>4</BuildOrder>
+        </None>
+        <CppCompile Include="SNServeurTcpMonoClient.cpp">
+            <BuildOrder>5</BuildOrder>
+        </CppCompile>
+        <None Include="SNServeurTcpMonoclient.h">
+            <BuildOrder>6</BuildOrder>
+        </None>
         <BuildConfiguration Include="Release">
             <Key>Cfg_2</Key>
             <CfgParent>Base</CfgParent>

@@ -1,6 +1,6 @@
 .\Win64\Debug\Echiquier.o: Echiquier.cpp \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1/Echiquier.h \
-  C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1/Joueur.h \
+  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
+  C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\string \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\istream \
   d:\program\c++\c++\ builder\embarcadero\studio\14.0\include\dinkumware64\ostream \

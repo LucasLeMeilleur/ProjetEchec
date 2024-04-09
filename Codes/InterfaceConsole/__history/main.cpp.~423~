@@ -1,4 +1,4 @@
-#include <iostream>
+﻿#include <iostream>
 #include <string>
 #include <string.h>
 #include <conio.h>
@@ -12,10 +12,10 @@
 
 int main(){
 
-
 	int mode;
 	SNClientTCP modeClient;
 	SNServeurTcpMonoClient modeServeur;
+	std::cout << "Saisir Le mode :" << '\n' << "1. Local   2. Serveur   3. Client" << '\n';
 	std::cin >> mode;
 
 	if (mode == 2) {
@@ -38,60 +38,19 @@ int main(){
 			bool jaiLesBlancs = false;
 		}
 
-
-
 	}
 	else if (mode == 3) {
-
 		std::string IPServeur;
-        std::string message = "";
-
-
+        char message[150];
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
-		modeClient.Recevoir(const_cast<char*>(message.data()), 150);
+		modeClient.SeConnecterAUnServeur("192.168.1.108", 1066);
+		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
-		modeClient.Envoyer(const_cast<char*>(message.data()),std::strlen(message)-1);
-
+		modeClient.Envoyer(message, strlen(message)-1);
 	}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -99,12 +58,6 @@ int main(){
 
 	Echiquier monEchiquier;
 	monEchiquier.InitialiserEchiquier();
-	monEchiquier.ModifierCaseEchiquier(' ',7,0);
-	monEchiquier.ModifierCaseEchiquier(' ',6,0);
-	monEchiquier.ModifierCaseEchiquier('p',6,0);
-
-
-
 
 	char TabPromo[8] = {'t','f','c','d','T','F','C','D'};
 
@@ -112,14 +65,10 @@ int main(){
 
 		std::cout << monEchiquier.VisualiserEchiquier();
 
-
 		int idep,jdep,iarr,jarr;
 		char pieceDemande;
 		bool test;
 		bool TestCarac = false;
-
-
-
 
 		std::cout << "Trait aux : " << monEchiquier.Trait() << "\n";
 		std::cout << "idep : ";
