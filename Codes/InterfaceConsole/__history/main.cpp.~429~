@@ -12,7 +12,6 @@
 
 int main(){
 
-
 	int mode;
 	SNClientTCP modeClient;
 	SNServeurTcpMonoClient modeServeur;
@@ -39,18 +38,13 @@ int main(){
 			bool jaiLesBlancs = false;
 		}
 
-
-
 	}
 	else if (mode == 3) {
-
 		std::string IPServeur;
         char message[150];
-
-
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur("192.168.1.108", 1066);
+		modeClient.SeConnecterAUnServeur(IPServeur.c_str(), 1066);
 		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
@@ -65,58 +59,21 @@ int main(){
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 	Echiquier monEchiquier;
 	monEchiquier.InitialiserEchiquier();
-
-
-
 
 	char TabPromo[8] = {'t','f','c','d','T','F','C','D'};
 
 	while(true){
 
-		std::cout << monEchiquier.VisualiserEchiquier();
 
+
+		std::cout << monEchiquier.VisualiserEchiquier();
 
 		int idep,jdep,iarr,jarr;
 		char pieceDemande;
 		bool test;
 		bool TestCarac = false;
-
-
-
 
 		std::cout << "Trait aux : " << monEchiquier.Trait() << "\n";
 		std::cout << "idep : ";
@@ -131,7 +88,7 @@ int main(){
 		if (idep <= -1 || jdep <= -1 || iarr <= -1 || jarr <= -1) break;
 		if (idep >= 8 || jdep >= 8 || iarr >= 8 || jarr >= 8) break;
 
-
+        std::cout << monEchiquier.Les64Caracteres();
 
 		if(((monEchiquier.LireCaseEchiquier(idep, jdep) == 'p') && iarr == 7)
 					||

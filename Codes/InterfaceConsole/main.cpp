@@ -44,7 +44,7 @@ int main(){
         char message[150];
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
+		modeClient.SeConnecterAUnServeur(IPServeur.c_str(), 1066);
 		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
@@ -66,6 +66,8 @@ int main(){
 
 	while(true){
 
+
+         std::cout << monEchiquier.Les64Caracteres();
 		std::cout << monEchiquier.VisualiserEchiquier();
 
 		int idep,jdep,iarr,jarr;
