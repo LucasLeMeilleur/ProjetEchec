@@ -309,3 +309,19 @@ bool Echiquier::EstUnePieceNoir(int ligne, int colonne){
 	if (std::isupper(tabEchiquier[ligne][colonne])) return 1;
 	else return 0;
 }
+
+
+
+std::string Echiquier::Les64Caracteres(){
+
+	std::string TableStr;
+
+	for (int i = 0; i < 8; i++) {
+		for (int j = 0; j < 8; j++) {
+         	TableStr += tabEchiquier[i][j];
+		}
+	}
+
+	return TableStr;
+
+}
