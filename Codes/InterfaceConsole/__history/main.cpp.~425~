@@ -12,7 +12,6 @@
 
 int main(){
 
-
 	int mode;
 	SNClientTCP modeClient;
 	SNServeurTcpMonoClient modeServeur;
@@ -39,22 +38,22 @@ int main(){
 			bool jaiLesBlancs = false;
 		}
 
-
-
 	}
 	else if (mode == 3) {
-
 		std::string IPServeur;
         char message[150];
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur("192.168.1.108", 1066);
+		modeClient.SeConnecterAUnServeur(IPServeur, 1066);
 		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
 		modeClient.Envoyer(message, strlen(message)-1);
 	}
+
+
+
 
 
 
@@ -69,14 +68,10 @@ int main(){
 
 		std::cout << monEchiquier.VisualiserEchiquier();
 
-
 		int idep,jdep,iarr,jarr;
 		char pieceDemande;
 		bool test;
 		bool TestCarac = false;
-
-
-
 
 		std::cout << "Trait aux : " << monEchiquier.Trait() << "\n";
 		std::cout << "idep : ";
