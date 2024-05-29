@@ -128,13 +128,22 @@ int main(){
 		else{
 
 
+
+		std::cout << "coté else atteint";
 			int n = 0;
 			do{
-				if(mode == 2) n =modeServeur.RecevoirUnMessage(message,150);
-				if(mode == 3) n =modeClient.Recevoir(message,150);
+
+			std::cout << "recuperation du message";
+			if(mode == 2) n =modeServeur.RecevoirUnMessage(message,150);
+			if(mode == 3) n =modeClient.Recevoir(message,150);
+            std::cout << "le message :" << message;
+			std::cout << "message recup ?";
 			}while(n<0);
 
-			if(strcmp(message, "Abandon") == 0){
+
+			std::cout << "Le message :  " << message;
+			std::cout << (message == "Abandon");
+			if(message == "Abandon"){
 				std::cout << "Votre adversaire abandonne";
 				abandon = true;
 
@@ -143,6 +152,7 @@ int main(){
 				monEchiquier.ChargerEchiquierComplet(message);
 				monEchiquier.ChangerLeTrait();
 			}
+           std::cout << "fin else";
 		}
 
 

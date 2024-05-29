@@ -130,8 +130,10 @@ int main(){
 
 			int n = 0;
 			do{
+
 				if(mode == 2) n =modeServeur.RecevoirUnMessage(message,150);
 				if(mode == 3) n =modeClient.Recevoir(message,150);
+
 			}while(n<0);
 
 			if(strcmp(message, "Abandon") == 0){
