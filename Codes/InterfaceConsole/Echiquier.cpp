@@ -331,8 +331,8 @@ void Echiquier::ChargerEchiquierComplet(char * les64Caracteres){
 	int k = 0;
 	for(int i = 0; i < 8 ; i++){
 		for(int j = 0; j < 8 ; j++){
-			tabEchiquier[i][j] = les64Caracteres;
-			k++
+			tabEchiquier[i][j] = les64Caracteres[k];
+			k++;
 		}
 	}
 

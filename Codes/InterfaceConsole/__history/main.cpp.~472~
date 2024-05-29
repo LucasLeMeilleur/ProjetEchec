@@ -15,19 +15,25 @@ int main(){
 	int mode;
 	SNClientTCP modeClient;
 	SNServeurTcpMonoClient modeServeur;
+	Echiquier monEchiquier;
+	monEchiquier.InitialiserEchiquier();
 	std::cout << "Saisir Le mode :" << '\n' << "1. Local   2. Serveur   3. Client" << '\n';
 	std::cin >> mode;
 
-	if (mode == 2) {
+	if (mode == 2) {                       // Mode Serveur
 		modeServeur.Initialisation();
 		modeServeur.MettreEnEcouteSurLePort(1066);
-		std::cout << "En écoute";
+		std::cout << "En écoute" << std::endl;
 		bool clienConnect = modeServeur.AttendreUnNouveauClient();
-		std::cout << "Quel est votre couleur ?" << std::endl;
-		std::string message = "Quel est votre couleur ?";
-		modeServeur.EnvoyerUnMessage(const_cast<char*>(message.data()), message.length()-1);
+		char message[150] = "Quel est votre couleur ?";
+		modeServeur.EnvoyerUnMessage(message, strlen(message));
+		int n=0;
+		do {
 
-		modeServeur.RecevoirUnMessage(const_cast<char*>(message.data()),150);
+			n=modeServeur.RecevoirUnMessage(message,1500);
+
+		}while (n<=0);
+
 
 		if( message[0] == 'N') {
 			std::cout << "Vous avez les blancs" << std::endl;
@@ -39,40 +45,40 @@ int main(){
 		}
 
 	}
-	else if (mode == 3) {
+	else if (mode == 3) {                    // Mode Client
 		std::string IPServeur;
         char message[150];
 		std::cout << "Veuillez saisir l'ip du serveur : ";
 		std::cin >> IPServeur;
-		modeClient.SeConnecterAUnServeur("192.168.1.108", 1066);
+		modeClient.SeConnecterAUnServeur(IPServeur.c_str(), 1066);
 		modeClient.Recevoir(message, 150);
 		std::cout << message << std::endl;
 		std::cout << "Saisir la réponse : ";
 		std::cin >> message;
-		modeClient.Envoyer(message, strlen(message)-1);
+		modeClient.Envoyer(message, 150);
 	}
 
 
 
 
 
-	Echiquier monEchiquier;
-	monEchiquier.InitialiserEchiquier();
+
+
+
+
 
 	char TabPromo[8] = {'t','f','c','d','T','F','C','D'};
 
 	while(true){
 
-		std::cout << monEchiquier.VisualiserEchiquier();
 
+		std::cout << monEchiquier.Les64Caracteres();
+		std::cout << monEchiquier.VisualiserEchiquier();
 
 		int idep,jdep,iarr,jarr;
 		char pieceDemande;
 		bool test;
 		bool TestCarac = false;
-
-
-
 
 		std::cout << "Trait aux : " << monEchiquier.Trait() << "\n";
 		std::cout << "idep : ";

@@ -152,7 +152,7 @@
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\windows\sdk\mcx.h \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\windows\sdk\imm.h \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\windows\sdk\ime_cmodes.h \
-  C:\Users\LPOKRYWA\Desktop\Echec\ Jeu\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
-  C:\Users\LPOKRYWA\Desktop\Echec\ Jeu\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
-  C:\Users\LPOKRYWA\Desktop\Echec\ Jeu\ProjetEchec\Codes\InterfaceConsole/SNClientTCP.h \
-  C:\Users\LPOKRYWA\Desktop\Echec\ Jeu\ProjetEchec\Codes\InterfaceConsole/SNServeurTcpMonoClient.h
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/SNClientTCP.h \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/SNServeurTcpMonoClient.h
