@@ -1,5 +1,6 @@
 #ifndef JoueurH
 #define JoueurH
+#endif
 
 
 
@@ -25,4 +26,3 @@ class Joueur{
 
 
 };
-#endif

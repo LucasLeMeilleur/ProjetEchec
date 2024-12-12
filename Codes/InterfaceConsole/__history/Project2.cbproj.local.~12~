@@ -12,14 +12,14 @@
     <Transaction>2024/03/30 21:29:11.000.763,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Echiquier.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp</Transaction>
     <Transaction>2024/03/30 21:29:11.000.763,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Echiquier.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h</Transaction>
     <Transaction>2024/03/30 23:14:37.000.498,=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp</Transaction>
-    <Transaction>2024/03/30 23:15:02.000.541,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Joueur.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h</Transaction>
     <Transaction>2024/03/30 23:15:02.000.541,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Joueur.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.cpp</Transaction>
+    <Transaction>2024/03/30 23:15:02.000.541,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Joueur.h=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\Unit1.h</Transaction>
     <Transaction>2024/03/30 23:15:12.000.758,C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\main.cpp=C:\Users\palad\Desktop\ProjetEchec\Codes\Defi1\File1.cpp</Transaction>
+    <Transaction>2024/04/04 23:18:53.000.610,=C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole\SNClientTCP.h</Transaction>
     <Transaction>2024/04/04 23:18:53.000.895,=C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole\SNClientTCP.cpp</Transaction>
     <Transaction>2024/04/04 23:18:53.000.888,=C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole\SNServeurTcpMonoclient.h</Transaction>
     <Transaction>2024/04/04 23:18:53.000.883,=C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole\SNServeurTcpMonoClient.cpp</Transaction>
-    <Transaction>2024/04/04 23:18:53.000.610,=C:\Users\palad\Desktop\ProjetEchec\Codes\InterfaceConsole\SNClientTCP.h</Transaction>
-    <Transaction>2024/05/29 15:23:29.000.429,=C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole\Deplacement.cpp</Transaction>
-    <Transaction>2024/05/29 15:23:29.000.469,=C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole\ReglesEtNotation.cpp</Transaction>
+    <Transaction>2024/05/29 15:23:29.429,=C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole\Deplacement.cpp</Transaction>
+    <Transaction>2024/05/29 15:23:29.469,=C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole\ReglesEtNotation.cpp</Transaction>
   </Transactions>
 </BorlandProject>

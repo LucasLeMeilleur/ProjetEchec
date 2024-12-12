@@ -83,7 +83,7 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 	ReglesEtNotation Verif;
 
-	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, this)){
+	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, tabEchiquier)){
 		std::cout << "verification passé";
 	}
 	else{

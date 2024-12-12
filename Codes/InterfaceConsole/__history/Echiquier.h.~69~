@@ -1,6 +1,8 @@
 
-#ifndef ECHIQUIER_H
-#define ECHIQUIER_H
+#ifndef EchiquierH
+#define EchiquierH
+
+#endif
 
 #include "Joueur.h"
 #include <string>
@@ -30,7 +32,7 @@ class Echiquier{
 	std::string Les64Caracteres();
 	void ChargerEchiquierComplet(char * les64Caracteres);
 	void ModifierCaseEchiquier(char cPiece, int ligne, int colonne);
-	bool EstUnePieceNoire(int ligne, int colonne);
+	bool EstUnePieceNoir(int ligne, int colonne);
 	bool EstUnePieceBlanche(int ligne , int colonne);
 	bool EstVide(int ligne, int colonne);
 	void ChangerLeTrait();
@@ -50,8 +52,4 @@ class Echiquier{
 	inline bool GrandRoqueBlancPossible(){ return grandRoqueBlancPossible;};
 	inline bool PetitRoqueBlancPossible(){ return petitRoqueBlancPossible;};
 
-	inline char LireCaseEchiquierPrecedent(int ligne, int colonne){ return tabEchiquierPrecedent[ligne][colonne];};
-
 };
-
-#endif

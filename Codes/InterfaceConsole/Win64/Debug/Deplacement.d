@@ -1,6 +1,7 @@
-.\Win64\Debug\Echiquier.o: Echiquier.cpp \
-  C:\Users\palad\Desktop\AncienPC\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
-  C:\Users\palad\Desktop\AncienPC\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
+.\Win64\Debug\Deplacement.o: Deplacement.cpp \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Deplacement.h \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Echiquier.h \
+  C:\Users\palad\Desktop\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Joueur.h \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\string \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\istream \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\ostream \
@@ -67,8 +68,4 @@
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\xlocinfo.h \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\xdebug \
   c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\system_error \
-  c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\cerrno \
-  C:\Users\palad\Desktop\AncienPC\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/ReglesEtNotation.h \
-  C:\Users\palad\Desktop\AncienPC\ProjetEchec\ProjetEchec\Codes\InterfaceConsole/Deplacement.h \
-  c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\sstream \
-  c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\iostream
+  c:\program\ files\ (x86)\embarcadero\studio\14.0\include\dinkumware64\cerrno

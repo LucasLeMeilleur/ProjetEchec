@@ -98,7 +98,7 @@ int main(){
 			while( (coupillegal == false) && (abandon == false)){
 
             	std::cout << "Demarrage boucle de jeu \n";
-				std::cout << monEchiquier.VisualiserEchiquier();
+				monEchiquier.VisualiserEchiquier();
 				if( idep == -1){
 					std::cout << "idep est inferieur a 1 processus d'abandon \n";
 					abandon = true;
@@ -129,12 +129,12 @@ int main(){
 
 					}
 					else{
+
 						std::string position = monEchiquier.Les64Caracteres();
 						if(mode == 2) modeServeur.EnvoyerUnMessage((char*)position.c_str(),64);
 						if(mode == 3) modeClient.Envoyer((char*)position.c_str(), 64);
 						monEchiquier.ChangerLeTrait();
 						std::cout << "Coup non illégale, envoyé \n";
-						break;
 					}
 				}
 			}

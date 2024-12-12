@@ -95,7 +95,7 @@ int main(){
 			std::cout << "jarr : ";
 			std::cin >> jarr;
 
-			while( (coupillegal == false) && (abandon == false)){
+			while( (abandon == false)){
 
             	std::cout << "Demarrage boucle de jeu \n";
 				std::cout << monEchiquier.VisualiserEchiquier();
@@ -129,12 +129,12 @@ int main(){
 
 					}
 					else{
+
 						std::string position = monEchiquier.Les64Caracteres();
 						if(mode == 2) modeServeur.EnvoyerUnMessage((char*)position.c_str(),64);
 						if(mode == 3) modeClient.Envoyer((char*)position.c_str(), 64);
 						monEchiquier.ChangerLeTrait();
 						std::cout << "Coup non illégale, envoyé \n";
-						break;
 					}
 				}
 			}

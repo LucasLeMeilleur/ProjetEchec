@@ -75,28 +75,31 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 
 	bool condition = ((idep >= 0 && idep <= 7) || (jdep >= 0 && jdep <= 7) || (iarr >= 0 && iarr <= 7) || (jarr >= 0 && jarr <= 7));
-	bool White =  ( (jBlancs.Trait() == 1) && ((EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0)) );
-	bool Black =  ( (jNoirs.Trait() == 1) && ((EstUnePieceNoire(idep,jdep) == 1) && (EstUnePieceNoire(iarr,jarr) == 0)) );
+	bool White =  ( (jBlancs.Trait() == 1) && (EstUnePieceBlanche(idep,jdep) == 1) && (EstUnePieceBlanche(iarr,jarr) == 0) );
+	bool Black =  ( (jNoirs.Trait() == 1) && (EstUnePieceNoire(idep,jdep) == 1) && (EstUnePieceNoire(iarr,jarr) == 0) );
 
 
-	std::cout << "trait :" << jBlancs.Trait() << jNoirs.Trait();
 
 	ReglesEtNotation Verif;
 
 	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, this)){
-		std::cout << "verification passé";
+	std::cout << "Vérification non passée, deplacement non possible" << std::endl;
+	return 0;
 	}
 	else{
-		std::cout << "Vérification non passée, deplacement non possible\n";
+        std::cout << "verification passé";
+    }
 
 
-		return 0;
-	}
+
+
+
 
 	std::cout << "Les Trois conditions : " <<  condition << White << Black;
 
 
 	if ( condition && (White || Black )){
+
 
 		if (((LireCaseEchiquier(idep,jdep) == 'p') && ( iarr == 7 ))     // PROMOTIONS
 							||
@@ -350,8 +353,7 @@ bool Echiquier::EstUnePieceBlanche(int ligne, int colonne){
 
 bool Echiquier::EstUnePieceNoire(int ligne, int colonne){
 
-	if ( tabEchiquier[ligne][colonne] == ' ') return 0;
-	else if (std::isupper(tabEchiquier[ligne][colonne])) return 1;
+	if (std::isupper(tabEchiquier[ligne][colonne])) return 1;
 	else return 0;
 }
 

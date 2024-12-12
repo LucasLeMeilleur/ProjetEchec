@@ -82,16 +82,16 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 	std::cout << "trait :" << jBlancs.Trait() << jNoirs.Trait();
 
 	ReglesEtNotation Verif;
-
-	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, this)){
-		std::cout << "verification passé";
-	}
-	else{
-		std::cout << "Vérification non passée, deplacement non possible\n";
-
-
-		return 0;
-	}
+//
+//	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, this)){
+//		std::cout << "verification passé";
+//	}
+//	else{
+//		std::cout << "Vérification non passée, deplacement non possible\n";
+//
+//
+//		return 0;
+//	}
 
 	std::cout << "Les Trois conditions : " <<  condition << White << Black;
 

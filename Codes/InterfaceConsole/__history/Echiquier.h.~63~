@@ -1,6 +1,9 @@
 
-#ifndef ECHIQUIER_H
-#define ECHIQUIER_H
+#ifndef EchiquierH
+#define EchiquierH
+
+#endif
+#include "ReglesEtNotation.h"
 
 #include "Joueur.h"
 #include <string>
@@ -11,6 +14,7 @@ class Echiquier{
 
 	private:
 
+	ReglesEtNotation Verif;
 	Joueur jNoirs;
 	Joueur jBlancs;
 	char tabEchiquier[8][8];
@@ -30,12 +34,13 @@ class Echiquier{
 	std::string Les64Caracteres();
 	void ChargerEchiquierComplet(char * les64Caracteres);
 	void ModifierCaseEchiquier(char cPiece, int ligne, int colonne);
-	bool EstUnePieceNoire(int ligne, int colonne);
+	bool EstUnePieceNoir(int ligne, int colonne);
 	bool EstUnePieceBlanche(int ligne , int colonne);
 	bool EstVide(int ligne, int colonne);
 	void ChangerLeTrait();
 	bool Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromotion);
 	std::string Trait();
+	int DemiCoup();
 	void SauvegarderEchiquierBMP(char * Fichier);
 
 	void SauvegarderEchiquierPrecedent(char tEchiquier[8][8]);
@@ -50,8 +55,4 @@ class Echiquier{
 	inline bool GrandRoqueBlancPossible(){ return grandRoqueBlancPossible;};
 	inline bool PetitRoqueBlancPossible(){ return petitRoqueBlancPossible;};
 
-	inline char LireCaseEchiquierPrecedent(int ligne, int colonne){ return tabEchiquierPrecedent[ligne][colonne];};
-
 };
-
-#endif

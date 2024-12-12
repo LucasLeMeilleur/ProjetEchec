@@ -125,6 +125,10 @@
         <BCC_PCHName_Clang>Project2PCH1.h</BCC_PCHName_Clang>
     </PropertyGroup>
     <ItemGroup>
+        <CppCompile Include="Deplacement.cpp">
+            <DependentOn>Deplacement.h</DependentOn>
+            <BuildOrder>8</BuildOrder>
+        </CppCompile>
         <CppCompile Include="Echiquier.cpp">
             <DependentOn>Echiquier.h</DependentOn>
             <BuildOrder>2</BuildOrder>
@@ -140,6 +144,10 @@
             <BuildOrder>0</BuildOrder>
             <PCH>true</PCH>
         </PCHCompile>
+        <CppCompile Include="ReglesEtNotation.cpp">
+            <DependentOn>ReglesEtNotation.h</DependentOn>
+            <BuildOrder>9</BuildOrder>
+        </CppCompile>
         <CppCompile Include="SNClientTCP.cpp">
             <BuildOrder>7</BuildOrder>
         </CppCompile>
