@@ -23,7 +23,6 @@ void Echiquier::InitialiserEchiquier(){
 	tabEchiquier[7][6] = 'C';  tabEchiquier[7][7] = 'T';
 
 
-
 	for (int j = 0; j < 8; j++) {
 
 		tabEchiquier[1][j] = 'p';
@@ -85,10 +84,13 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 
 	if (Verif.DeplacementPossible(idep,jdep,iarr,jarr,true, this)){
 		std::cout << "verification passé";
+
+		demiCoup++;
+		notation = Verif.EnregistrerNotation(idep,jdep,iarr,jarr,true, this);
+		SauvegarderEchiquierPrecedent(tabEchiquier);
 	}
 	else{
 		std::cout << "Vérification non passée, deplacement non possible\n";
-
 
 		return 0;
 	}
@@ -125,7 +127,6 @@ bool Echiquier::Deplacer(int idep, int jdep,int iarr, int jarr, char piecePromot
 				Verif.EnregistrerNotation(idep,jdep,iarr,jarr,piecePromotion,this);
 				SauvegarderEchiquierPrecedent(tabEchiquier);
 				return 1;
-				std::cout << "Promotion";
 			}
 			else {
 				std::cout << "erreur";
